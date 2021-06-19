@@ -1,0 +1,96 @@
+body
+{
+    background-color: aqua;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: top;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+#game_field
+{
+display: grid;
+grid-template-columns: repeat(25,1fr);
+grid-template-rows: repeat(25,1fr);
+background-color: black;
+width: 100vmin;
+height: 100vmin;
+position: relative;
+
+}
+#score
+{
+    position: absolute;
+    right: 3vmin;
+    top: 2vmin;
+    width: 7vmin;
+    height: 1fr;    
+    border-radius: 0px;
+    border-color: wheat;
+    border-style: solid;
+    color: wheat;
+    padding :1vmin;
+}
+.snake
+{   width: 1fr;
+    height: 1fr;
+    background-color: orange;
+    border-radius: 0.25vmin;
+    border-style: solid;
+}
+.food
+{
+    width: 1fr;
+    height: 1fr;
+    background-color: rgb(46, 197, 0);
+    border-radius: 0.25vmin;
+    border-style: solid;
+
+}
+.portal
+{
+    width: 1fr;
+    height: 1fr;
+    background-color: whitesmoke;
+    border-radius: 0.25vmin;
+    border-style: solid;
+}
+.head
+{
+    position: relative;
+    background-color: red   ;
+    transform: rotate(0deg) ;
+ 
+
+}
+.head::before
+{
+    position: absolute;
+    content: "";
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    background-color: yellow;
+    left:2vmin;
+    top:0.3vmin;
+   
+
+}
+.head::after
+{
+    position: absolute;
+    content: "";
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 0.2vmin;
+    top: 0.3vmin;
+   
+
+}
